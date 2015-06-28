@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/mauricedb/react-splitter",
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
     "react": "^0.13.3"
   }
 }
