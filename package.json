@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/mauricedb/react-splitter/issues"
   },
-  "homepage": "https://github.com/mauricedb/react-splitter"
+  "homepage": "https://github.com/mauricedb/react-splitter",
+  "devDependencies": {
+    "react": "^0.13.3"
+  }
 }
