@@ -10,16 +10,16 @@ var App = React.createClass({
     render: function render() {
         return React.createElement(
             Splitter,
-            { className: 'container' },
+            { style: { height: 200 } },
             React.createElement(
                 'div',
-                { className: 'left' },
-                'Left'
+                null,
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dignissimos ex fugit illum iusto non suscipit. Aliquam aut est ipsam laudantium ratione! Accusantium adipisci autem ea enim ex ipsum nemo non optio repudiandae sit. Accusamus alias, atque aut corporis cum, deleniti dolore, dolorem doloribus ducimus earum esse fuga fugiat harum impedit ipsa ipsum itaque iusto laudantium libero magni maxime minima nobis non odit perspiciatis quasi quidem quo reiciendis rem repellat reprehenderit sint sit ut vel vero voluptate voluptatibus! Aliquid autem earum eligendi eos est expedita hic iusto numquam odit porro, praesentium provident quae, quam quas similique sit soluta suscipit voluptatum.'
             ),
             React.createElement(
                 'div',
-                { className: 'right' },
-                'Right'
+                null,
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dignissimos ex fugit illum iusto non suscipit. Aliquam aut est ipsam laudantium ratione! Accusantium adipisci autem ea enim ex ipsum nemo non optio repudiandae sit. Accusamus alias, atque aut corporis cum, deleniti dolore, dolorem doloribus ducimus earum esse fuga fugiat harum impedit ipsa ipsum itaque iusto laudantium libero magni maxime minima nobis non odit perspiciatis quasi quidem quo reiciendis rem repellat reprehenderit sint sit ut vel vero voluptate voluptatibus! Aliquid autem earum eligendi eos est expedita hic iusto numquam odit porro, praesentium provident quae, quam quas similique sit soluta suscipit voluptatum.'
             )
         );
     }

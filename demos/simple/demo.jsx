@@ -4,9 +4,25 @@
 
 var App = React.createClass({
     render(){
-        return <Splitter className='container'>
-            <div className='left'>Left</div>
-            <div className='right'>Right</div>
+        return <Splitter style={{height:200}}>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dignissimos ex fugit illum iusto non
+                suscipit. Aliquam aut est ipsam laudantium ratione! Accusantium adipisci autem ea enim ex ipsum nemo non
+                optio repudiandae sit. Accusamus alias, atque aut corporis cum, deleniti dolore, dolorem doloribus
+                ducimus earum esse fuga fugiat harum impedit ipsa ipsum itaque iusto laudantium libero magni maxime
+                minima nobis non odit perspiciatis quasi quidem quo reiciendis rem repellat reprehenderit sint sit ut
+                vel vero voluptate voluptatibus! Aliquid autem earum eligendi eos est expedita hic iusto numquam odit
+                porro, praesentium provident quae, quam quas similique sit soluta suscipit voluptatum.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dignissimos ex fugit illum iusto non
+                suscipit. Aliquam aut est ipsam laudantium ratione! Accusantium adipisci autem ea enim ex ipsum nemo non
+                optio repudiandae sit. Accusamus alias, atque aut corporis cum, deleniti dolore, dolorem doloribus
+                ducimus earum esse fuga fugiat harum impedit ipsa ipsum itaque iusto laudantium libero magni maxime
+                minima nobis non odit perspiciatis quasi quidem quo reiciendis rem repellat reprehenderit sint sit ut
+                vel vero voluptate voluptatibus! Aliquid autem earum eligendi eos est expedita hic iusto numquam odit
+                porro, praesentium provident quae, quam quas similique sit soluta suscipit voluptatum.
+            </div>
         </Splitter>
     }
 });
