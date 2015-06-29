@@ -44,8 +44,6 @@ var Splitter = React.createClass({
 });
 
 
-//React.render(<App />, document.getElementById('app'))
-
 /*!
  * JQuery Spliter Plugin
  * Copyright (C) 2010-2013 Jakub Jankiewicz <http://jcubic.pl>
@@ -114,7 +112,7 @@ var Splitter = React.createClass({
             if (typeof position === 'number') {
                 return position;
             } else if (typeof position === 'string') {
-                var match = position.match(/^([0-9]+)(px|%)$/);
+                var match = position.match(/^([0-9\.]+)(px|%)$/);
                 if (match) {
                     if (match[2] == 'px') {
                         return +match[1];
@@ -279,7 +277,7 @@ var Splitter = React.createClass({
             $(document.documentElement).bind('mousedown.splitter touchstart.splitter', function (e) {
                 if (splitter_id !== null) {
                     current_splitter = splitters[splitter_id];
-                    $('<div class="splitterMask"></div>').css('cursor', splitter.css('cursor')).insertAfter(current_splitter);
+                    $('<div class="splitterMask"></div>').css('cursor', current_splitter.children().eq(1).css('cursor')).insertAfter(current_splitter);
                     current_splitter.settings.onDragStart(e);
                     return false;
                 }
