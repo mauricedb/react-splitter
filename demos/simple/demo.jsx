@@ -4,7 +4,11 @@
 
 var App = React.createClass({
     render(){
-        return <Splitter style={{height:200}}>
+        return <Splitter style={{height:200}}
+                         orientation='vertical'
+                         position='40%'
+                         onDragEnd={e => console.log(e.clientX)}
+            >
             <div>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dignissimos ex fugit illum iusto non
                 suscipit. Aliquam aut est ipsam laudantium ratione! Accusantium adipisci autem ea enim ex ipsum nemo non

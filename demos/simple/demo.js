@@ -10,7 +10,13 @@ var App = React.createClass({
     render: function render() {
         return React.createElement(
             Splitter,
-            { style: { height: 200 } },
+            { style: { height: 200 },
+                orientation: 'vertical',
+                position: '40%',
+                onDragEnd: function (e) {
+                    return console.log(e.clientX);
+                }
+            },
             React.createElement(
                 'div',
                 null,

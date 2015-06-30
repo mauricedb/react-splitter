@@ -52,13 +52,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
 	    value: true
 	});
+
+	__webpack_require__(1);
+
 	var Splitter = React.createClass({
 	    displayName: 'Splitter',
 
@@ -74,9 +77,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //var splitter = $('#jquerySplitter').split({
 	        var domNode = React.findDOMNode(this);
 
-	        var splitter = $(domNode).split({
-	            orientation: 'vertical'
-	        });
+	        var splitter = $(domNode).split(this.props);
+
+	        //var splitter = $(domNode).split({
+	        //    orientation: 'vertical',
+	        //    //limit: self.minWidth,
+	        //    //position: splitterWidth,
+	        //    //position: '50%',
+	        //    //onDragEnd: function (e) {
+	        //    //    // dragEnd can exceed min/max width if user "lets go" beyond the min/max
+	        //    //    var newPosition = self._sanitizeSplitterPositionValue(e.clientX);
+	        //    //    window.localStorage.setItem(lsKey, newPosition);
+	        //    //}
+	        //});
 
 	        $(window).resize(function () {
 	            var newPosition = self._sanitizeSplitterPositionValue(splitter.position());
@@ -101,6 +114,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 	exports['default'] = Splitter;
+	module.exports = exports['default'];
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
 
 	/*!
 	 * JQuery Spliter Plugin
@@ -119,6 +137,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * You should have received a copy of the GNU Lesser General Public License
 	 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	 */
+	'use strict';
+
 	(function ($, undefined) {
 	    var count = 0;
 	    var splitter_id = null;
@@ -386,15 +406,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return self;
 	    };
 	})(jQuery);
-	module.exports = exports['default'];
-	//limit: self.minWidth,
-	//position: splitterWidth,
-	//position: '50%',
-	//onDragEnd: function (e) {
-	//    // dragEnd can exceed min/max width if user "lets go" beyond the min/max
-	//    var newPosition = self._sanitizeSplitterPositionValue(e.clientX);
-	//    window.localStorage.setItem(lsKey, newPosition);
-	//}
 
 	//throw position + ' is invalid value';
 
