@@ -3,16 +3,21 @@
  */
 
 var gulp = require('gulp');
+var gutil = require("gulp-util");
+var webpack = require("webpack");
 var babel = require('gulp-babel');
+var config = require('./webpack.config');
 
-gulp.task('compile', function () {
-    return gulp.src('./src/*.jsx')
-        .pipe(babel({
-            blacklist: [
-                'useStrict'
-            ]
-        }))
-        .pipe(gulp.dest('./dist'));
+gulp.task("compile", function (callback) {
+    // run webpack
+    webpack(config,
+        function (err, stats) {
+            if (err) throw new gutil.PluginError("webpack", err);
+            gutil.log("[webpack]", stats.toString({
+                // output options
+            }));
+            callback();
+        });
 });
 
 gulp.task('demos:simple', function () {
@@ -31,4 +36,4 @@ gulp.task('watch-js', function () {
 
 });
 
-gulp.task('default', ['compile','demos:simple', 'watch-js']);
+gulp.task('default', ['compile', 'demos:simple', 'watch-js']);

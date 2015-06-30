@@ -43,6 +43,7 @@ var Splitter = React.createClass({
     }
 });
 
+export default Splitter;
 
 /*!
  * JQuery Spliter Plugin
