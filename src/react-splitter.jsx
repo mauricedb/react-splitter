@@ -1,4 +1,6 @@
 import './jquery-splitter';
+import React from 'react';
+
 
 var Splitter = React.createClass({
     componentDidMount() {

@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
+		module.exports = factory(require("react"));
 	else if(typeof define === 'function' && define.amd)
-		define(factory);
+		define(["react"], factory);
 	else if(typeof exports === 'object')
-		exports["Splitter"] = factory();
+		exports["Splitter"] = factory(require("react"));
 	else
-		root["Splitter"] = factory();
-})(this, function() {
+		root["Splitter"] = factory(root["React"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -60,9 +60,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: true
 	});
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
 	__webpack_require__(1);
 
-	var Splitter = React.createClass({
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var Splitter = _react2['default'].createClass({
 	    displayName: 'Splitter',
 
 	    componentDidMount: function componentDidMount() {
@@ -75,7 +81,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //var splitterWidth = lsValue;
 
 	        //var splitter = $('#jquerySplitter').split({
-	        var domNode = React.findDOMNode(this);
+	        var domNode = _react2['default'].findDOMNode(this);
 
 	        var splitter = $(domNode).split(this.props);
 
@@ -105,7 +111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return newPosition;
 	    },
 	    render: function render() {
-	        return React.createElement(
+	        return _react2['default'].createElement(
 	            'div',
 	            this.props,
 	            this.props.children
@@ -410,6 +416,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	//throw position + ' is invalid value';
 
 	//throw 'position have invalid type';
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ }
 /******/ ])
