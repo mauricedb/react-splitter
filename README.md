@@ -1,5 +1,7 @@
 # react-splitter
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mauricedb/react-splitter.svg)](https://greenkeeper.io/)
+
 This component is a wrapper around the [jquery.splitter](https://github.com/jcubic/jquery.splitter) component by [Jakub Jankiewicz](http://jcubic.pl). 
 
 ## Dependency
